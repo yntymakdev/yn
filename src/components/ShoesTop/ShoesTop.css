@@ -1,0 +1,12 @@
+.shoes_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shoes_sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

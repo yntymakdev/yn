@@ -1,0 +1,9 @@
+#side_bar {
+  width: 250px;
+}
+
+.side_bar {
+  width: 100%;
+  overflow-y: scroll;
+  height: 80vh;
+}
