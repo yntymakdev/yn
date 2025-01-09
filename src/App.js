@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <ShoesTop />
       <MainPage />
+      <Footer />
     </div>
   );
 }

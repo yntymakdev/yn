@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import {
@@ -27,6 +27,16 @@ const SideBar = () => {
     "Athletics",
     "Sandals, Slides & Flip Flops",
   ];
+
+  const [bio, setBio] = useState(false);
+
+  const more = (text) => {
+    if (bio === "Hello") {
+      setBio(text.length);
+    } else {
+      setBio("Hello");
+    }
+  };
 
   const genderArr = ["Men", "Women", "Unisex"];
   const sizeArr = [
@@ -120,7 +130,7 @@ const SideBar = () => {
                 padding: 0,
               }}
             >
-              {sizeArr.map((i, index) => (
+              {sizeArr.slice(0, bio).map((i, index) => (
                 <Button
                   sx={{
                     border: "1.5px solid #CACACB",
@@ -132,6 +142,13 @@ const SideBar = () => {
                   {i}
                 </Button>
               ))}
+              <h5
+                onClick={() => {
+                  more(sizeArr);
+                }}
+              >
+                {bio === "Hello" ? "Читать еще" : "Закрыть"}
+              </h5>
             </AccordionDetails>
           </Accordion>
         </Box>
